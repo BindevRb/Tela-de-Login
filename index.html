@@ -34,7 +34,7 @@
             margin-bottom: 10px;
         }
 
-        #email, #senha {
+        #user, #senha {
             
             width: 100%;
             margin-bottom: 10px;
@@ -65,12 +65,12 @@
         <p>Sistema de Autenticação</p>
 
         <div>
-            <label for="email">E-mail:</label>
-            <input type="text" id="email">
+            <label for="user">Usuário:</label>
+            <input type="text" id="user">
         </div>
         
         <div>
-            <label for="senha">Senha: </label>
+            <label for="senha">Senha:</label>
             <input type="password" id="senha">
         </div>
 
@@ -80,8 +80,40 @@
         </div>
 
         <div>
-            <button type="button">Entrar</button>
+            <button type="button" onclick="logar()">Entrar</button>
         </div>
     </div>
+
+    <Script>
+        function logar() {
+            let var_user = document.querySelector('#user').value;
+            let var_senha = document.querySelector('#senha').value;
+            let var_termos = document.querySelector('#termodeuso').checked
+            
+            if ( var_user == '' ) {
+                alert("O Campo Usuário é Obrigatório!");
+                return
+            }
+
+            if (var_senha == '' ) {
+                alert("O Campo Senha é Obrigatório!");
+                return
+            }
+
+            if (var_termos == false) {
+                alert("É necessário Ler e Aceitar os termos.")
+                return
+            } 
+
+            if (var_user == "admin" && var_senha == "admin" && var_termos == true) {
+                alert ("Admin Logado com Sucesso!");
+            }
+            else {
+                alert("Usuário e Senha incorretos!");
+            }
+
+        }
+
+    </Script>
 </body>
 </html> 
