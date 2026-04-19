@@ -1,5 +1,8 @@
 # Tela de Login - Estudo
 
+## Link do Projeto
+https://bindevrb.github.io/Tela-de-Login/
+
 ## Sobre o projeto
 
 Este projeto consiste no desenvolvimento de uma **tela de login simples**, com o objetivo de praticar conceitos fundamentais de **HTML, CSS e JavaScript**.
@@ -78,7 +81,8 @@ Este projeto foi desenvolvido com fins educacionais, visando:
 ## Preview
 
 <img width="1305" height="657" alt="image" src="https://github.com/user-attachments/assets/2450aae4-f99a-45fa-8715-e8ce607baf73" />
-<img width="1327" height="654" alt="image" src="https://github.com/user-attachments/assets/54d2b57a-6e3d-4b2c-a1ff-1caf1487afb7" />
+<img width="1311" height="660" alt="image" src="https://github.com/user-attachments/assets/942d4a7f-2284-443f-a456-a35d48291c0d" />
+
 
 
 ---
