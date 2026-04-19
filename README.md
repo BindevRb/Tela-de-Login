@@ -37,8 +37,8 @@ A tela de login possui três elementos principais:
 
 Para acessar o sistema:
 
-* Usuário: `admin`
-* Senha: `admin`
+* Usuário: `admin`; `Barney`; `Daniel`; `Fabio`
+* Senha: `admin`; `ba123456`; `da123456`; `fa123456`
 * Checkbox de termos: **marcado**
 
 ---
@@ -72,15 +72,6 @@ Este projeto foi desenvolvido com fins educacionais, visando:
 * Entender validações básicas em JavaScript
 * Trabalhar com formulários e eventos
 * Desenvolver noções de UI simples
-
----
-
-## Melhorias futuras
-
-* Substituir `alert` por mensagens visuais na tela
-* Implementar validação mais robusta
-* Integrar com backend (login real)
-* Adicionar responsividade para mobile
 
 ---
 
