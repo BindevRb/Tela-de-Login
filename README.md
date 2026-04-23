@@ -61,6 +61,7 @@ A interface foi construída com foco em simplicidade, contendo:
 * Layout centralizado
 * Estilo dark com gradiente
 * Formulário organizado e funcional
+* Botão de Alternância de Estado na caixa de texto Senha
 
 ---
 

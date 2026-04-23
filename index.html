@@ -43,6 +43,11 @@
 
         }
 
+        #senha {
+            width: 100%;
+            padding-right: 30px;
+        }
+
         label {
             color: #fff;
         }
@@ -66,6 +71,44 @@
             margin-bottom: 15px;
         }
 
+        .Userbox input:focus-visible {
+            outline: none;
+        }
+    
+        /* Alinhando o Eye com o box da Senha */
+
+        .passwordbox-wrapper{
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .passwordbox input:focus-visible{
+            outline: none;
+        }
+
+        .passwordbox {
+            position: relative;
+            width: 310px 35px;
+            margin-bottom: 10px;
+        }
+
+        .passwordbox i {
+            position: absolute;
+            right: 10px;
+            color: #1f1f1f;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding-bottom: 8px;
+        }
+
+        .passwordbox input {
+            width: 100%;
+            padding-right: 35px;
+            box-sizing: border-box;
+        }
+
     </style>
 </head>
 <body> 
@@ -74,14 +117,17 @@
         <h3>Login</h3>
         <p>Sistema de Autenticação</p>
 
-        <div>
+        <div class="Userbox">
             <label for="user">Usuário:</label>
             <input type="text" id="user">
         </div>
         
-        <div>
+        <div class="password-wrapper">
             <label for="senha">Senha:</label>
-            <input type="password" id="senha">
+            <div  class="passwordbox">
+                  <input type="password" id="senha" >
+                  <i id="toggleSenha" class="bi bi-eye-fill"></i>
+             </div>
         </div>
 
         <div>
@@ -95,6 +141,36 @@
     </div>
 
     <Script>
+
+        //Criando o Botão do olhinho e Mudando ele
+        let Eye = document.querySelector('#toggleSenha');
+        let mudando_tipo = document.querySelector("#senha");
+
+        //Adicionando a função do clique
+        Eye.addEventListener("click", function() {
+             if (mudando_tipo.type === "password") {
+                mudando_tipo.type = "text" 
+                Eye.classList.add('bi-eye-slash-fill')
+                 Eye.classList.remove('bi-eye-fill')
+             }
+             else {
+                mudando_tipo.type = "password"
+                 Eye.classList.remove('bi-eye-slash-fill')
+                 Eye.classList.add('bi-eye-fill')
+             }
+
+             
+       if (mudando_tipo.type === "password") {
+        Eye.classList.toggle('bi bi-eye-fill')
+       } 
+       else {
+        
+       }
+    
+       });
+
+
+        
 
         //Simulação de Banco de Dados com Lista de Objetos
         let usuarios = [
