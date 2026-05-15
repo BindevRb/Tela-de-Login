@@ -66,7 +66,7 @@
 
             if (UsuarioEncontrado) {
                 //alert ("Usuario Logado com Sucesso!");
-                window.location.href = "../Home/home.html";
+                window.location.href = "../home/home.html";
             }
             else {
                 alert("Usuário e Senha incorretos!");
