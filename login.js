@@ -26,8 +26,31 @@
     
        });
 
+       // Alternando de Login para Cadastro
+       let login_mode = document.getElementById('login-bt')
+       let cadastro_mode = document.getElementById('cadastro-bt')
 
+       //Variavel que controla o Estado
+       let iscadastro = false;
+
+       //adicionando a função de clicar e alternar
+       cadastro_mode.addEventListener("click", function() {
+
+        iscadastro = !iscadastro //Inverte o estado
         
+        if (iscadastro) {
+            //Modo para cadastrar o usuario
+            cadastro_mode.innerText = "Entrar";
+            login_mode.innerText = "Criar Conta";
+        }
+        else {
+            //Modo Padrão
+            cadastro_mode.innerText = "Criar Conta";
+            login_mode.innerText = "Entrar";
+        }        
+       })
+
+            
 
         //Simulação de Banco de Dados com Lista de Objetos
         let usuarios = [
@@ -64,9 +87,16 @@
                return item.var_user === var_user && item.var_senha === var_senha
             })
 
-            if (UsuarioEncontrado) {
+            
+            if (UsuarioEncontrado)  {
+                //bloqueando quando o modo de cadasatro é ativo
+                if (iscadastro){
+                    return; //bloqueia
+                }
+                else {
                 //alert ("Usuario Logado com Sucesso!");
                 window.location.href = "../home/home.html";
+                }
             }
             else {
                 alert("Usuário e Senha incorretos!");

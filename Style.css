@@ -44,7 +44,22 @@
             color: #fff;
         }
 
-        button {
+        .cadastro{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: #282828;
+            color: #fff;
+            opacity: 0.5;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .cadastro:hover{
+            opacity: 1;
+        }
+
+        .logar{
             width: 100%;
             padding: 8px;
             margin-top: 10px;
@@ -54,6 +69,8 @@
             border: none;
             cursor: pointer;
         }
+
+        
 
         .bi-lock-fill{
             text-align: center;
